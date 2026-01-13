@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@plugin "daisyui";
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+@layer base {
+  h1 {
+    @apply text-purple-950 text-2xl font-sans
+  }
+  p {
+    @apply text-zinc-900 text-xl font-sans
+  }
+  button{
+    @apply p-2 rounded-xl bg-zinc-300 hover:bg-zinc-500 text-xl font-sans
+  }
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
