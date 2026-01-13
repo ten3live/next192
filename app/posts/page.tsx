@@ -15,7 +15,7 @@ export default async function Posts() {
       <ul className="font-[family-name:var(--font-geist-sans)] max-w-2xl space-y-4">
         {posts.map((post) => (
           <li key={post.id}>
-            <span className="font-semibold">{post.title}</span>
+            <a href={`/posts/${post.id}`} className="font-semibold">{post.title}</a>
             <span className="text-sm text-gray-600 ml-2">
               by {post.author.name}
             </span>
@@ -23,6 +23,7 @@ export default async function Posts() {
         ))}
       </ul>
             <Link className='btn btn-primary' href={'/'}>Home</Link>
+            <Link className='btn btn-primary' href={'/posts/new'}>New</Link>
 
     </div>
   );
