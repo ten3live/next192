@@ -4,7 +4,9 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 export default function NewPost() {
-  async function createPost(formData: FormData) {
+  
+  
+    async function createPost(formData: FormData) {
     "use server";
 
     const title = formData.get("title") as string;
@@ -14,7 +16,7 @@ export default function NewPost() {
       data: {
         title,
         content,
-        authorId: 1,
+        authorId: "1",
       },
     });
 

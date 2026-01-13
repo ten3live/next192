@@ -22,7 +22,7 @@ export default async function Posts() {
           </li>
         ))}
       </ul>
-            <Link className='btn btn-primary' href={'/'}>Home</Link>
+            <Link className='btn btn-primary' href={'/dashboard'}>Home</Link>
             <Link className='btn btn-primary' href={'/posts/new'}>New</Link>
 
     </div>

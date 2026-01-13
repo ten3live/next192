@@ -2,10 +2,10 @@ import prisma from '@/lib/prisma'
 import Link from 'next/link';
 
 export default async function Home() {
-  const users = await prisma.user.findMany();
+  // const users = await prisma.user.findMany();
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center -mt-16">
-      <h1 className="text-4xl font-bold mb-8 font-[family-name:var(--font-geist-sans)] text-[#333333]">
+      {/* <h1 className="text-4xl font-bold mb-8 font-[family-name:var(--font-geist-sans)] text-[#333333]">
         Superblog
       </h1>
       <ol className="list-decimal list-inside font-[family-name:var(--font-geist-sans)]">
@@ -14,8 +14,9 @@ export default async function Home() {
             {user.name}
           </li>
         ))}
-      </ol>
-      <Link className='btn btn-primary' href={'/posts'}>Posts</Link>
+      </ol> */}
+      <Link className='btn btn-primary' href={'/login'}>Login</Link>
+      <Link className='btn btn-primary' href={'/register'}>Register</Link>
     </div>
   );
 }
