@@ -1,16 +1,16 @@
 @import "tailwindcss";
-/* @plugin "daisyui"; */
+@plugin "daisyui";
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* @theme inline {
+@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-} */
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -18,7 +18,7 @@
     --foreground: #ededed;
   }
 }
-/* @layer base {
+@layer base {
   h1 {
     @apply text-purple-950 text-2xl font-sans
   }
@@ -28,7 +28,7 @@
   button{
     @apply p-2 rounded-xl bg-zinc-300 hover:bg-zinc-500 text-xl font-sans
   }
-} */
+}
 body {
   background: var(--background);
   color: var(--foreground);
